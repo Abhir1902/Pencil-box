@@ -64,7 +64,7 @@
             const user = userCredential.user;
             set(ref(database, 'users/' + user.uid),{
                 username: username,
-                email: email,
+                email: email
                 // Add more stuff here
             })
             alert('Welcome to Pencil Box');

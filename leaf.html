@@ -98,8 +98,8 @@
       if(t=='Y' || t=='y'){
       signOut(auth).then(() => {
       // Sign-out successful.
-      window.location.href = "index.html"
-      ;}).catch((error) => {
+      window.location.replace("index.html");
+    }).catch((error) => {
           // An error happened.
           const errorCode = error.code;
           const errorMessage = error.message;
