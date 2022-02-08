@@ -4,76 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="leaf.css">
+    <title>User login</title>
+    <link rel="stylesheet" href="loginpage.css">
+    <script src = "loginpage.js"></script>
 </head>
-<body class="D">
-    <div id = "Sidebar">
-        <button onclick="show_hide()" class = "C" style="position: absolute; top: 20px; left: 50px; border-radius: 50%;width: 50px;height: 50px;cursor: pointer;" placeholder="Click to go to the smart board" title="whiteboard/homepage">A</button>
-        <input onInput="draw_color = this.value" type = "color" class = "grey" style ="width: 50px; height: 50px; border-radius: 50%;top: 47%" title="choosecolor">
-        <button class = "A" onclick="undo_screen()">Undo</button>
-        <input onInput = "draw_width = this.value" type = "range" min=1 max=50 id = "myinput" title="select pen size">
-        <button id = "B" onclick="clear_screen()">Clear</button>
-        <button id ="M" onclick="erase()">Erase</button>
-    </div>
-    <div id = "RightBar">
-        <a href="calc.html" target = "_blank"><button class = "A" style = "position: absolute; top: 10px; right: 20px; border-radius: 50%; width: 50px; height: 50px;align-items: center;text-align: center;display: flex;justify-content: center;" title="Calculator"><img src="calc.png" alt="calculator"></button></a>
-        <button id = "signout" style = "position: absolute; top: 100px; right: 5px; border-radius: 50%; width: 50px; height: 50px;align-items: center;text-align: center;display: flex;justify-content: center;"><img src="signout.jfif" alt="files" style="width: 30px; height: 30px; border-radius: 50%;" title = "signout"></button>
-        
-        <a href="https://www.instagram.com/" target = "_blank" title = "Instagram"><button class = "A" style = "position: absolute; top: 190px; right: 5px; border-radius: 50%; width: 50px; height: 50px;align-items: center;text-align: center;display: flex;justify-content: center;"><img src="Instagram.png" alt="files" style="width: 30px; height: 30px; border-radius: 50%;"></button></a>
-        
-        <a href="www.discord.com" title = "Discord" target = "_blank"><button class = "A" style = "position: absolute; top: 280px; right: 5px; border-radius: 50%; width: 50px; height: 50px;align-items: center;text-align: center;display: flex;justify-content: center;"><img src="discord icon.jpg" alt="files" style="width: 30px; height: 30px; border-radius: 50%;"></button></a>
-        
-        <a href="https://meet.google.com/" title = "Meet" target = "_blank"><button class =  "A" style = "position: absolute; top: 370px; right: 5px; border-radius: 50%; width: 50px; height: 50px;align-items: center;text-align: center;display: flex;justify-content: center;"><img src="google meet.jfif" alt="files" style="width: 47px; height: 35px; border-radius: 50%;" ></button></a>
-    </div>
-    <div class = "tooltip"><button onclick="changeColor()" style="position: absolute;top: 110px;left: 50px;width: 50px;height: 50px;border-radius: 56px;background: #001d06;box-shadow:  10px 10px 49px #000c02,-10px -10px 49px #002e0a; " id = "Z"><span class = "tooltiptext">
-        <ul>
-            <h4>Collaborate with your friends via social media sites on rightside of the screen</h4>
-            <br>
-            <br>
-            <h4>This button works for changing ambience to dark and white</h4>
-            <br><br>
-            <h4>To save the image:
-                <br>
-                1. Right click on the whiteboard. 
-                <br>
-                2. click on Save Image As. 
-            </h4>
-        </ul>
-    </span></button></div>
-    <a href="leaf.html" style="color: rgb(199, 11, 11)" id  = "coloring"><h1 title="Pencil box">Pencil Box</h1>
-        <h3 style="position: absolute; left: calc(45% + 10px); top: 120px; color: black" title="pencil box">A smart board</h3></a>
-    <div id = "no_body">
-        <div id="circle">
-            <!-- <div onClick = "change_color(this)" id = "pink"></div>
-            <div onClick = "change_color(this)" id = "purple"></div>
-            <div onClick = "change_color(this)" id = "green"></div>
-            <div onClick = "change_color(this)" id = "cyan"></div> -->
-            <div id = "pink" title ="hot pink"></div>
-            <div id = "purple" title="purple"></div>
-            <div id = "green" title = "green"></div>
-            <div id = "cyan" title = "cyan"></div>
-            <div id = "line1"></div>
-            <div id = "line1" style="width: 10px;height: 300px"></div>
-            <div id = "hemi1"></div>
-            <div id = "hemi2"></div>
-            <div id = "hemi3"></div>
-            <div id = "hemi4"></div>
+<body>
+    <div class="login">
+        <img src="Robot.gif" alt="User_login">
+        <br>
+        <br>
+        <div class="user center" style="color:rgb(241, 241, 241)"> 
+        <input id = "email" type="text" placeholder = "email">
+        <br>
+        <br>
+        <input id = "pass" type="password" placeholder = "password"> 
         </div>
-        
-        <input onInput="draw_color = this.value; document.getElementsByClassName('grey').style.background=this.value;" type = "color" class = "grey" title = "choose color">
+        <br>
+         <br>
+         <br>
+         <br>
+        <div style="text-align: center;"><button id = "login">Login</button> <a href="signup.html"><button>Sign up</button></a></div>
     </div>
-    <canvas id  = "can"></canvas>
-    <script src="./main.js"></script>
 </body>
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
     //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
-    import { getDatabase, set ,ref} from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
-    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+    import { getDatabase ,set ,ref } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js";
+    //import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -88,24 +47,29 @@
     messagingSenderId: "631635213971",
     appId: "1:631635213971:web:5b60b9b80d98d7b8a29766"
   };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  //const analytics = getAnalytics(app);
-  const database = getDatabase(app);
-  const auth = getAuth();
-  signout.addEventListener('click',(e)=>{
-      var t = prompt("Do you want to signout?[Y/N]");
-      if(t=='Y' || t=='y'){
-      signOut(auth).then(() => {
-      // Sign-out successful.
-      window.location.href = "loginpage.html"
-      ;}).catch((error) => {
-          // An error happened.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          alert(errorMessage);
-      });}
-  });
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+    const datab = getDatabase(app);
+    const auth = getAuth();
+    login.addEventListener('click',(e)=>{
+        let email = document.getElementById('email').value; 
+        let password = document.getElementById('pass').value;
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed in 
+            const user = userCredential.user;
+            alert("Welcome to Pencil Box!!");
+            window.location.href = "leaf.html";
+        // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+        });
+
+    })
   </script>
 </html>
-
