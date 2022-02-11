@@ -61,6 +61,11 @@
         .then((userCredential) => {
         // Signed in 
             const user = userCredential.user;
+            const dt = new Date();
+            update(ref(database, 'users/' + user.uid),{
+                last_login: dt
+                // Add more stuff here
+            })
             alert("Welcome to Pencil Box!!");
             window.location.href = "leaf.html";
         // ...
