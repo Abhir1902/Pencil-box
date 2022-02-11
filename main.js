@@ -4,6 +4,12 @@ function show_hide(){
     if(a==0){
         document.getElementById("no_body").style.display="inline";
         document.getElementById("can").style.display="none";
+        document.getElementById("myinput").style.display="none";
+        document.getElementById("U").style.display="none";
+        document.getElementById("grey1").style.display="none";
+        
+        document.getElementById("B").style.display="none";
+        document.getElementById("M").style.display="none";
         document.getElementById("RightBar").style.display = "inline";
         document.getElementsByTagName("h1")[0].style.display="inline";
         document.getElementsByTagName("h3")[0].style.display="inline";
@@ -12,6 +18,12 @@ function show_hide(){
     else{
         document.getElementById("no_body").style.display="none";
         document.getElementById("can").style.display="inline";
+        document.getElementById("myinput").style.display='inline';
+        document.getElementById("U").style.display='inline';
+        document.getElementById("grey1").style.display='inline';
+        
+        document.getElementById("B").style.display="inline";
+        document.getElementById("M").style.display='inline';
         document.getElementsByTagName("h1")[0].style.display="none";
         document.getElementsByTagName("h3")[0].style.display="none";
         document.getElementById("RightBar").style.display = "none";
