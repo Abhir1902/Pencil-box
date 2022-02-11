@@ -17,6 +17,18 @@ body{
     /*opacity: 0.5;*/
     background-color: rgba(255, 255, 255, 0.123);
 }
+.login1{
+    margin:auto;
+    margin-top: 100px;
+    border-radius: 30px;
+    text-align: center;
+    width: 300px;
+    background-color: none;
+    height: 450px;
+    padding: 10px;
+    /*opacity: 0.5;*/
+    background-color: rgba(255, 255, 255, 0.123);
+}
 button {
     color: green;
     text-align: center;
