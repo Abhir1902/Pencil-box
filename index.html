@@ -62,7 +62,7 @@
         // Signed in 
             const user = userCredential.user;
             const dt = new Date();
-            update(ref(database, 'users/' + user.uid),{
+            References.update(ref(database, 'users/' + user.uid),{
                 last_login: dt
                 // Add more stuff here
             })
