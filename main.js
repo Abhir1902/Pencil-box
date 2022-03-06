@@ -79,15 +79,15 @@ function changeColor(){
 
 const canvas = document.getElementById("can");
 var context = canvas.getContext("2d");
-canvas.width = window.innerWidth - 150;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth*1.0 - 150.0;
+canvas.height = window.innerHeight * 1.0;
 window.addEventListener('resize', function(event) {
-    canvas.width = window.innerWidth - 150;
-canvas.height = window.innerHeight;
-console.log(canvas.width,canvas.height);
+    canvas.width = window.innerWidth*1.0 - 150.0;
+canvas.height = window.innerHeight*1.0;
+console.log(canvas.width*1.0,canvas.height*1.0);
 }, true);
 var draw_color="black";
-let draw_width = "50";
+let draw_width = "25.0";
 let is_drawing = false;
 // let is_writing = false;
 var start_background_color;
@@ -103,14 +103,14 @@ function start(event){
     is_drawing = true;
     is_writing = false;
     context.beginPath();
-    context.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    context.moveTo(event.clientX*1.0 - canvas.offsetLeft*1.0, event.clientY*1.0 - canvas.offsetTop*1.0);
     event.preventDefault();
 }
 function draw(event){
     if (is_drawing){
-        context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        context.lineTo(event.clientX*1.0 - canvas.offsetLeft*1.0, event.clientY*1.0 - canvas.offsetTop*1.0);
         context.strokeStyle = draw_color;
-        context.lineWidth = draw_width;
+        context.lineWidth = draw_width*1.0;
         context.lineCap = "round";
         context.lineJoin = "round";
         context.stroke();
@@ -133,7 +133,7 @@ function stop(event){
     }
     event.preventDefault();
     if(event.type!='mouseout'){
-        restore_array.push(context.getImageData(0,0,canvas.width,canvas.height));
+        restore_array.push(context.getImageData(0.0,0.0,canvas.width*1.0,canvas.height*1.0));
         index++;
 
     }
@@ -184,8 +184,8 @@ document.getElementById("purple").addEventListener('click',function () {
 function clear_screen(){
         start_background_color = '#ffffff';
         context.fillStyle = start_background_color;
-        context.clearRect(0,0,canvas.width,canvas.height);
-        context.fillRect(0,0,canvas.width,canvas.height);
+        context.clearRect(0.0,0.0,canvas.width*1.0,canvas.height*1.0);
+        context.fillRect(0.0,0.0,canvas.width*1.0,canvas.height*1.0);
         restore_array = [];
         index = -1;
 }
@@ -206,7 +206,7 @@ function undo_screen(){
     else{
         index--;
         restore_array.pop();
-        context.putImageData(restore_array[index],0,0);
+        context.putImageData(restore_array[index],0.0,0.0);
     }
 }
 

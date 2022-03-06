@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>Pencil box</title>
+    <link rel="icon" type="image/x-icon" href="Pencil box.PNG">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="leaf.css">
@@ -15,7 +16,7 @@
         <button onclick="show_hide()" class = "C" style="position: absolute; top: 20px; left: 50px; border-radius: 50%;width: 50px;height: 50px;cursor: pointer;" placeholder="Click to go to the smart board" title="whiteboard/homepage">A</button>
         <input onInput="draw_color = this.value" type = "color" id = "grey1" style ="width: 50px; height: 50px; border-radius: 50%;top: 47%" title="choosecolor">
         <button id  = "U" onclick="undo_screen()">Undo</button>
-        <input onInput = "draw_width = this.value" type = "range" min=1 max=50 id = "myinput" title="select pen size">
+        <input onInput = "draw_width = this.value; console.log(draw_width);" type = "range" min=1 max=50 id = "myinput" title="select pen size">
         <button id = "B" onclick="clear_screen()">Clear</button>
         <button id ="M" onclick="erase()">Erase</button>
     </div>
