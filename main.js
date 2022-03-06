@@ -114,6 +114,7 @@ function draw(event){
         context.lineCap = "round";
         context.lineJoin = "round";
         context.stroke();
+        
     }
     // else if(is_writing){
     //     context.font = draw_color;
@@ -188,8 +189,15 @@ function clear_screen(){
         restore_array = [];
         index = -1;
 }
+var m = 0;
+var t = draw_color;
 function erase(){
-    draw_color = '#ffffff';
+    if(draw_color=='#ffffff'){
+        draw_color = t; 
+    }
+    else{
+        draw_color = '#ffffff';
+    }
 }
 function undo_screen(){
     if(index<=0){
