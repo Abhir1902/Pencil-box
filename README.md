@@ -1,4 +1,4 @@
-<p align="left">
+<p align="center">
   <a href="https://pencilbox.netlify.app/">
     <img src="media/readme/readme-heading.png" alt="Pencil Box" height="52">
   </a>
