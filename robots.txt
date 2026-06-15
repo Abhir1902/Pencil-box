@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /pages/demo/
 
 Sitemap: https://pencilbox.netlify.app/sitemap.xml

@@ -11,6 +11,8 @@
     <meta property="og:title" content="Pencil Box — A Notepad++ for Your Whiteboard">
     <meta property="og:description" content="A Notepad++ for your whiteboard. Draw in the browser, save locally, eight pens, dark mode, no signup.">
     <meta property="og:image" content="https://pencilbox.netlify.app/assets/images/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Pencil Box">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pencil Box — A Notepad++ for Your Whiteboard">
@@ -29,6 +31,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "WebPage",
       "@graph": [
         {
           "@type": "WebSite",
@@ -142,6 +145,7 @@ try {
                 <a href="#persist">Persist</a>
                 <a href="#stories">Stories</a>
                 <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacy</a>
                 <a href="#connect">Connect</a>
             </div>
             <div class="landing-nav-end">
@@ -384,6 +388,15 @@ try {
             </div>
         </section>
 
+        <section class="lp-section" id="use-cases" data-reveal>
+            <div class="lp-wrap">
+                <h2 class="lp-headline">A free online whiteboard that stays on your device.</h2>
+                <p class="lp-body">Pencil Box is built for quick thinking — wireframes on a call, math on a tablet, doodles while brainstorming. No signup wall, no cloud upload, no install dialog. Open the tab, draw, and come back later.</p>
+                <p class="lp-body">Unlike heavy design tools, Pencil Box is a browser drawing board with zero setup. Your boards auto-save in local storage, so a refresh or a closed tab does not wipe your work. Named tabs keep ideas separated the way a code editor keeps files open — a Notepad++ for your whiteboard.</p>
+                <p class="lp-body">Whether you need a simple sketch pad, a persistent whiteboard for study notes, or a lightweight canvas for team huddles, Pencil Box keeps the tools visible and the friction invisible.</p>
+            </div>
+        </section>
+
         <section class="lp-section" id="faq" data-reveal>
             <div class="lp-wrap">
                 <h2 class="lp-headline">Common questions</h2>
@@ -413,6 +426,15 @@ try {
                         </div>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="lp-section" id="privacy" data-reveal>
+            <div class="lp-wrap">
+                <h2 class="lp-headline">Privacy</h2>
+                <p class="lp-body">Pencil Box stores your drawings in your browser's local storage on your device. We do not require an account, and your boards are not uploaded to our servers by default.</p>
+                <p class="lp-body">If Web Analytics is enabled, anonymous page-view data may be collected to understand usage. No drawing content is included in analytics events. You can clear saved boards anytime by clearing site data for this origin in your browser settings.</p>
+                <p class="lp-body">Questions? Open an issue on <a href="https://github.com/Abhir1902/Pencil-box" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
             </div>
         </section>
 
@@ -447,7 +469,7 @@ try {
             <svg viewBox="0 0 148 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <text x="0" y="16" font-family="Aeonik, Inter, sans-serif" font-weight="700" font-size="17" fill="currentColor">Pencil Box</text>
             </svg>
-            <span>&copy; 2026 Pencil Box</span>
+            <span>&copy; 2026 Pencil Box · <a href="#privacy">Privacy</a></span>
         </footer>
     </div>
     <div id="canvas-wrap">
