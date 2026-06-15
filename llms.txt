@@ -1,0 +1,11 @@
+# Pencil Box
+> A Notepad++ for your whiteboard — free browser whiteboard with auto-save, eight pen types, and no signup.
+
+- [Home](https://pencilbox.netlify.app/): Landing page and whiteboard app
+- [Source](https://github.com/Abhir1902/Pencil-box): Open-source repository
+
+## Features
+Eight pen types, dark mode, color wheel, undo/redo, chrome-style tabs, localStorage persistence.
+
+## Tagline
+A Notepad++ for your whiteboard.
