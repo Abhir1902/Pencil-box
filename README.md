@@ -6,7 +6,7 @@
 
 A browser-based whiteboard with an infinite graph-paper canvas. No accounts, no install — draw locally, switch tabs, and pick up where you left off.
 
-**[Try it live → pencilbox.netlify.app](https://pencilbox.netlify.app/)**
+**[Try it live → Pencilboxx.com](https://pencilboxx.com)**
 
 ## Demos
 
